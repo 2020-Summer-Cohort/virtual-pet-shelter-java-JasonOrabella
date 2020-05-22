@@ -1,14 +1,35 @@
 package shelter;
 
+import java.util.ArrayList;
 import java.util.Map;
 
 public class VirtualPetShelterApp {
-    public static void main(String[] args) {
-        VirtualPetShelterApp virtualPet = new VirtualPetShelterApp();
-        boolean run = true;
-        while (run) {
-
-        }
+    public VirtualPetShelterApp(boolean run) {
+        run = true;
     }
 
+    public static void main(String[] args) {
+        while (run = true) ;
+        {
+            private void increaseThrist;
+            {
+                return
+
+            }
+            private void increaseHunger;
+            {
+                return
+            }
+            private void increaseBoredom;
+            {
+                return
+            }
+            System.out.println("This is the Status of Your pets");
+        }
+
+
+    }
+
+    {
+    }
 }
