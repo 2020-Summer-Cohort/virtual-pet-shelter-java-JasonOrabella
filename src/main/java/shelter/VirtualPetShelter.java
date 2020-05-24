@@ -24,7 +24,11 @@ public class VirtualPetShelter {
     VirtualPet p2;
     VirtualPet p3;
     ArrayList<VirtualPet> list;
-//    ArrayList<String> name;
+    Iterator itr;
+    Iterator itr1;
+
+
+    //    ArrayList<String> name;
 //    ArrayList<String> description;
 //    ArrayList<Integer> hunger;
 //    ArrayList<Integer> thirst;
@@ -64,6 +68,10 @@ public class VirtualPetShelter {
             return list;
 
         }
+//        public string  addNewPetName
+//        }
+
+
 //        public void addPet(string name, string description){
 //
 //        }
@@ -72,13 +80,33 @@ public class VirtualPetShelter {
 //        }
         public void waterAll(){
 
+            itr1 = list.iterator();
+            while (itr1.hasNext()){
+                VirtualPet p = (VirtualPet)itr1.next();
+                p.thirst -= 20;
+            }
+
+
+
         }
         public void feedAll(){
 
+        itr = list.iterator();
+        while (itr.hasNext()){
+            VirtualPet p = (VirtualPet)itr.next();
+            p.hunger -= 20;
+        }
 
 
         }
         public void tick(){
+            itr = list.iterator();
+            while (itr.hasNext()){
+                VirtualPet p = (VirtualPet)itr.next();
+                p.hunger += 5;
+                p.thirst += 5;
+                p.boredom +=5;
+            }
 
         }
 
@@ -89,23 +117,3 @@ public class VirtualPetShelter {
 
 
 
-//    public void tick() {
-//        hunger += 10;
-//        boredom += 10;
-//        thirst += 10;
-//    }
-//    {
-//        private void increaseThrist;
-//        {
-//            return
-//
-//        }
-//        private void increaseHunger;
-//        {
-//            return
-//        }
-//        private void increaseBoredom;
-//        {
-//            return
-//        }
-//

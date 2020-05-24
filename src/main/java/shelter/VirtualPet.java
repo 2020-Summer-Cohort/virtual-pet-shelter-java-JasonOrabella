@@ -37,11 +37,11 @@ public class VirtualPet {
 //        this.boredom = randomW.nextInt(50);
     }
 
-    private int getBoredom() {
+    public int getBoredom() {
         return boredom;
     }
 
-    private int getHunger() {
+    public int getHunger() {
         return hunger;
     }
 
