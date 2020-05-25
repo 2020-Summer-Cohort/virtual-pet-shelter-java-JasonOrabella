@@ -17,7 +17,7 @@ import java.util.*;
 
 public class VirtualPetShelter {
 
-//    int hunger;
+    //    int hunger;
 //    int thirst;
 //    int boredom;
     VirtualPet p1;
@@ -34,81 +34,82 @@ public class VirtualPetShelter {
 //    ArrayList<Integer> thirst;
 //    ArrayList<Integer> boredom;
     VirtualPetShelter() {
-        p1 = new VirtualPet("Baldur","cute",25,25,25);
-        p2 =  new VirtualPet("Nick","gray",25,25,25);
-        p3 = new VirtualPet("Gary","snail",25,25,25);
+        p1 = new VirtualPet("Baldur", "Cute Cat", 25, 25, 25);
+        p2 = new VirtualPet("Nick", "Gray Cat", 25, 25, 25);
+        p3 = new VirtualPet("Gary", "Snail smelly boy", 25, 25, 25);
         list = new ArrayList<VirtualPet>();
         list.add(p1);
         list.add(p2);
         list.add(p3);
 
-//        p4 =  new VirtualPet("Sammy","cute",25,25,25);
-//        Map<VirtualPet,Integer> virtualPetIntegerMap=new HashMap<VirtualPet,Integer>();{
-//        virtualPetIntegerMap.put("name",1,2,4,1);
-//    Map map = new HashMap();
-//        VirtualPet vp1 = new VirtualPet("test1","test2",10,10,10);
-//        name = new ArrayList<String>();
-//        name.add("Baldur");
-//        name.add("Nick");
-//        name.add("Gary");
-//        name.add("Sammy");
-//        description = new ArrayList<String>();
-//        name.add("Cute furry orange cat");
-//        name.add("Cute furry gray boy");
-//        name.add("Slimy underwater boy");
-//        name.add("ferocious monster dog");
-//        hunger = new ArrayList<Integer>();
-//        hunger.add(25);
-//        hunger.add(25);
-//        hunger.add(25);
-//        hunger.add(25);
-        }
-        public ArrayList<VirtualPet> petsAvailable(){
 
-            return list;
+    }
 
-        }
-//        public string  addNewPetName
-//        }
+    public ArrayList<VirtualPet> petsAvailable() {
+
+        return list;
+
+    }
 
 
-//        public void addPet(string name, string description){
-//
-//        }
-//        public void playPet(string name){
-//
-//        }
-        public void waterAll(){
-
-            itr1 = list.iterator();
-            while (itr1.hasNext()){
-                VirtualPet p = (VirtualPet)itr1.next();
-                p.thirst -= 20;
+    public void playWithPet(String Pet) {
+//            Pet.boredom -= 10;
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).name.equalsIgnoreCase(Pet)) {
+                list.get(i).boredom -= 10;
             }
 
-
-
         }
-        public void feedAll(){
+    }
+
+    public void waterAll() {
+
+        itr1 = list.iterator();
+        while (itr1.hasNext()) {
+            VirtualPet p = (VirtualPet) itr1.next();
+            p.thirst -= 20;
+        }
+
+
+    }
+
+    public void feedAll() {
 
         itr = list.iterator();
-        while (itr.hasNext()){
-            VirtualPet p = (VirtualPet)itr.next();
+        while (itr.hasNext()) {
+            VirtualPet p = (VirtualPet) itr.next();
             p.hunger -= 20;
         }
+    }
 
+    public ArrayList<VirtualPet> removePet(String Pet) {
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).name.equalsIgnoreCase(Pet)) {
+                System.out.println("You adopted" + " " + (list.get(i).name));
 
-        }
-        public void tick(){
-            itr = list.iterator();
-            while (itr.hasNext()){
-                VirtualPet p = (VirtualPet)itr.next();
-                p.hunger += 5;
-                p.thirst += 5;
-                p.boredom +=5;
+                list.remove(i);
+
             }
 
         }
+    return list;
+    }
+
+    public void addPet(VirtualPet Pet) {
+        list.add(Pet);
+    }
+
+
+    public void tick() {
+        itr = list.iterator();
+        while (itr.hasNext()) {
+            VirtualPet p = (VirtualPet) itr.next();
+            p.hunger += 5;
+            p.thirst += 5;
+            p.boredom += 5;
+        }
+
+    }
 
 }
 

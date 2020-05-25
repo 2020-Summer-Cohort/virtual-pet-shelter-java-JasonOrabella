@@ -12,6 +12,9 @@ import java.util.Random;
 
 public class VirtualPet {
     String name;
+
+
+
     String description;
     int hunger;
     int thirst;
@@ -23,7 +26,9 @@ public class VirtualPet {
 //
 //    }
 
-    VirtualPet(String name,String description, int hunger, int thirst, int boredom) {
+
+
+    VirtualPet(String name, String description, int hunger, int thirst, int boredom) {
 //        Random randomV = new Random();
 //        Random randomU = new Random();
 //        Random randomW = new Random();
@@ -35,6 +40,11 @@ public class VirtualPet {
 //        this.thirst = randomV.nextInt(50);;
 //        this.hunger =  randomU.nextInt(50);
 //        this.boredom = randomW.nextInt(50);
+    }
+
+    VirtualPet(String name, String description){
+        this.name = name;
+        this.description = description;
     }
 
     public int getBoredom() {
@@ -49,6 +59,10 @@ public class VirtualPet {
         return thirst;
     }
 
-
-
+    public String getName() {
+        return name;
+    }
+    public String getDescription() {
+        return description;
+    }
 }
